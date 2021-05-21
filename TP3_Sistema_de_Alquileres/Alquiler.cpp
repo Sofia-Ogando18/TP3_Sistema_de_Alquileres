@@ -18,6 +18,7 @@ Alquiler::Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion) :Alquiler
 void Alquiler::Set_Extras(Adicional ad1, int can1, Adicional ad2, int can2) {
 	Extras.Set_Todo(ad1, can1, ad2, can2);
 };
+Vehiculo* Alquiler::Get_Vehiculo() { return Alquilado; };
 Alquiler::~Alquiler() {};
 string Alquiler::To_String_e_Imprimir() {
 	string Aux;

@@ -18,6 +18,7 @@
 using namespace std;
 class Alquiler
 {
+	friend class Lista_Alquileres;
 	Vehiculo* Alquilado;
 	Cliente* Usuario;
 	Adicionales Extras;
@@ -30,6 +31,7 @@ public:
 	Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion);
 	~Alquiler();
 	void Set_Extras(Adicional ad1, int can1, Adicional ad2, int can2);
+	Vehiculo* Get_Vehiculo();
 	float Calcular_Tarifa_Dia(Adicional ad1, int can1, Adicional ad2, int can2);
 	float Calcular_Tarifa_Total();
 	string To_String_e_Imprimir();
