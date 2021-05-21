@@ -9,7 +9,7 @@
 #include "Vehiculo.h"
 using namespace std;
 class Automovil :
-    protected Vehiculo
+    public Vehiculo
 {
     friend class Adicionales;
 public:

@@ -26,8 +26,8 @@ public:
 	cantidad de cascos como una característica del alquiler en lugar de una caracteristica de vehículo.
 	Los vehículos nos quedaron todos con los mismos atributos, se diferencian en ciertos métodos*/
 	void set_ultimo_mantenimiento();
-	virtual void set_Tarifa_dia() = 0;
-	virtual void  PasoMantenimiento() = 0;
+	virtual void set_Tarifa_dia();
+	virtual void  PasoMantenimiento();
 	string To_String_e_Imprimir_Vehiculo();
 
 };

@@ -2,7 +2,7 @@
 #include "Vehiculo.h"
 using namespace std;
 class Trafic :
-    protected Vehiculo
+    public Vehiculo
 {
 	friend class  Adicionales;
 public:

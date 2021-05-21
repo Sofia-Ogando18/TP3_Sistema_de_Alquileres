@@ -1,5 +1,11 @@
 #include "Alquiler.h"
-Alquiler::Alquiler() {};
+Alquiler::Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion){
+	time_t now = time(0);
+	tm* aux = localtime(&now);
+	Fecha_Adquisicion = *aux;
+	this->Usuario = cliente;
+	this->Alquilado = vehiculo;
+};
 float Alquiler::Calcular_Tarifa_Dia(Adicional ad1, int can1, Adicional ad2, int can2) {
 	Tarifa_por_Dia = Extras.Calcular_Precio_Dia(Alquilado, ad1, can1, ad2, can2);
 	return Tarifa_por_Dia;
@@ -7,13 +13,6 @@ float Alquiler::Calcular_Tarifa_Dia(Adicional ad1, int can1, Adicional ad2, int 
 float Alquiler::Calcular_Tarifa_Total() {
 	int Duracion = Calcular_Dias(Fecha_Adquisicion, Fecha_Retorno);
 	return Alquilado->Tarifa_Base + (Duracion * Tarifa_por_Dia);
-};
-Alquiler::Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion) :Alquiler() {
-	time_t now = time(0);
-	tm* aux = localtime(&now);
-	Fecha_Adquisicion = *aux;
-	this->Usuario = cliente;
-	this->Alquilado = vehiculo;
 };
 void Alquiler::Set_Extras(Adicional ad1, int can1, Adicional ad2, int can2) {
 	Extras.Set_Todo(ad1, can1, ad2, can2);
