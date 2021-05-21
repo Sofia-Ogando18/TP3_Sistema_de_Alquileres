@@ -27,4 +27,5 @@ string Alquiler::To_String_e_Imprimir() {
 	Aux = "El cliente" + User + "\n Ha alquilado el vehículo" + Alquilado->To_String_e_Imprimir_Vehiculo() +
 		Extras.To_String_e_Imprimir() + "\n desde el " + Adq + " hasta el " + Rtrn + "\n Por un precio total de " +
 		to_string(Calcular_Tarifa_Total());
+	return Aux;
 };

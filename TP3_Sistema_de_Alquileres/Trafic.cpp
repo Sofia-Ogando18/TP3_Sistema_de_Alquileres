@@ -9,7 +9,6 @@ Trafic::Trafic() {
 	this->Tarifa_Base = 20000;
 }
 Trafic::~Trafic() {};
-Trafic::Trafic() :Trafic() {};
 void Vehiculo::PasoMantenimiento() {
 	string aux = "\n Mantenimiento de una Trafic:\n";
 	aux = aux + "Comprobar el nivel de aceite. ";
