@@ -16,21 +16,7 @@ protected:
 	bool eliminar_objetos;
 public:
 	Lista<V>(int tam = NMAX, bool eliminar = false);
-	~Lista() {
-
-		if (Concesionaria != NULL) {
-			if (eliminar_objetos) {
-				for (int i = 0; i < ocupado; i++)
-				{
-					if (Concesionaria[i] != NULL)
-						delete Concesionaria[i];
-				}
-			}
-			delete[] Concesionaria;
-		}
-
-
-	}
+	~Lista();
 	void agregar(V* objeto)
 	{
 	if (ocupado >= tamanio)
@@ -78,4 +64,19 @@ inline Lista<V>::Lista(int tam, bool eliminar)
 		}
 		eliminar_objetos = eliminar;
 	}
+}
+inline Lista::~Lista() {
+
+	if (Concesionaria != NULL) {
+		if (eliminar_objetos) {
+			for (int i = 0; i < ocupado; i++)
+			{
+				if (Concesionaria[i] != NULL)
+					delete Concesionaria[i];
+			}
+		}
+		delete[] Concesionaria;
+	}
+
+
 }
