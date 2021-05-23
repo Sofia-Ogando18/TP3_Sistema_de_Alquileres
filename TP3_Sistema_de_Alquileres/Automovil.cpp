@@ -9,8 +9,8 @@ Automovil::Automovil() {
 	this->Tarifa_Base = 10000;
 };
 Automovil::~Automovil() {};
-void Vehiculo::set_Tarifa_dia() { Precio_Por_Dia = 20000; };
-void Vehiculo::PasoMantenimiento() {
+void Automovil::set_Tarifa_dia() { Precio_Por_Dia = 20000; };
+void Automovil::PasoMantenimiento() {
 	string aux = "\n Mantenimiento de una Camioneta:\n";
 	aux = aux + "Comprobar el nivel de aceite. ";
 	aux = aux + "\n Comprobar si las ruedas estan infladas.";

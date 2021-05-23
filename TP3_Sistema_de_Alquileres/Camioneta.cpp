@@ -10,8 +10,8 @@ Camioneta::Camioneta() {
 
 };
 Camioneta::~Camioneta() {};
-void Vehiculo::set_Tarifa_dia() { Precio_Por_Dia = 30000; };
-void Vehiculo::PasoMantenimiento() {
+void Camioneta::set_Tarifa_dia() { Precio_Por_Dia = 30000; };
+void Camioneta::PasoMantenimiento() {
 	string aux = "\n Mantenimiento de una Camioneta:\n";
 	aux = aux + "Comprobar el nivel de aceite. ";
 	aux = aux + "\n Comprobar si las ruedas estan infladas.";

@@ -8,9 +8,9 @@ Motocicleta::Motocicleta() {
 	this->Tarifa_Base = 5000;
 
 };
-void Vehiculo::set_Tarifa_dia() { Precio_Por_Dia = 10000; };
+void Motocicleta::set_Tarifa_dia() { Precio_Por_Dia = 10000; };
 Motocicleta::~Motocicleta() {};
-void Vehiculo::PasoMantenimiento() {
+void Motocicleta::PasoMantenimiento() {
 	string aux = "\n Mantenimiento de una Motocicleta:\n";
 	aux = aux + "Comprobar el nivel de aceite del carter";
 	aux = aux + "\n Comprobar las ruedas";

@@ -14,6 +14,8 @@ class Automovil :
     friend class Adicionales;
 public:
 	Automovil();
+	void set_Tarifa_dia();
+	void PasoMantenimiento();
 	~Automovil();
 
 };

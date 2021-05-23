@@ -9,7 +9,7 @@ Trafic::Trafic() {
 	this->Tarifa_Base = 20000;
 }
 Trafic::~Trafic() {};
-void Vehiculo::PasoMantenimiento() {
+void Trafic::PasoMantenimiento() {
 	string aux = "\n Mantenimiento de una Trafic:\n";
 	aux = aux + "Comprobar el nivel de aceite. ";
 	aux = aux + "\n Comprobar si las ruedas estan infladas.";
@@ -20,4 +20,4 @@ void Vehiculo::PasoMantenimiento() {
 	cout << aux;
 	set_ultimo_mantenimiento();
 };
-void Vehiculo::set_Tarifa_dia() { Precio_Por_Dia = 40000; };
+void Trafic::set_Tarifa_dia() { Precio_Por_Dia = 40000; };
