@@ -2,8 +2,8 @@
 #include "Lista.h"
 #include "Alquiler.h"
 template <class V>
-class Lista_Alquileres :
-	protected Lista<V>
+class Lista_Alquileres:
+	public Lista
 {
 public:
 	Lista_Alquileres<V>(int tam = NMAX);
@@ -20,7 +20,7 @@ inline Lista_Alquileres<V>::Lista_Alquileres(int tam) {
 	for (int i = 0; i < tam; i++)
 	{
 		this->Concesionaria[i] = NULL;
-	}
+	};
 };
 template<class V>
 inline Alquiler* Lista_Alquileres<V>::crear_alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion) {
