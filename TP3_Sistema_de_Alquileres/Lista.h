@@ -7,38 +7,38 @@
 #include <iostream>
 #include <time.h>
 using namespace std;
-template <class V>
+template <class B>
 class Lista
 {
 protected:
-	V** Concesionaria;
+	B** Concesionaria;
 	int tamanio, ocupado;
 public:
-	Lista<V>(int tam = NMAX);
+	Lista<B>(int tam = NMAX);
 	~Lista();
-	void agregar(V* objeto);
-	V* operator[](unsigned int pos);
-	V* QuitarPos(int pos);
-	void operator+(V* objeto);
-	void operator<<(V* obj);
+	void agregar(B* objeto);
+	B* operator[](unsigned int pos);
+	B* QuitarPos(int pos);
+	void operator+(B* objeto);
+	void operator<<(B* obj);
 	unsigned int getocupado() const;
 };
 
-template<class V>
-inline Lista<V>::Lista(int tam)
+template<class B>
+inline Lista<B>::Lista(int tam)
 {
 	{
 		this->tamanio = tam;
 		ocupado = 0;
-		Concesionaria = new V * [tam];
+		Concesionaria = new B * [tam];
 		for (int i = 0; i < tam; i++)
 		{
 			Concesionaria[i] = NULL;
 		}
 	}
 }
-template<class V>
-inline Lista<V>::~Lista() {
+template<class B>
+inline Lista<B>::~Lista() {
 	if (Concesionaria != NULL) {
 		for (int i = 0; i < ocupado; i++)
 		{
@@ -48,23 +48,23 @@ inline Lista<V>::~Lista() {
 		delete[] Concesionaria;
 	}
 }
-template<class V>
-inline void Lista<V>::agregar(V* objeto)
+template<class B>
+inline void Lista<B>::agregar(B* objeto)
 {
 	if (ocupado >= tamanio)
 		throw exception("No hay lugar");
 	Concesionaria[ocupado++] = objeto;
 }
-template<class V>
-inline V* Lista<V>::operator[](unsigned int pos) {
+template<class B>
+inline B* Lista<B>::operator[](unsigned int pos) {
 	if (pos < ocupado)
 		return Concesionaria[pos];
 	return NULL;
 }
-template<class V>
-inline V* Lista<V>::QuitarPos(int pos) {
-	V* a = Concesionaria[pos];
-	V* aux = NULL;
+template<class B>
+inline B* Lista<B>::QuitarPos(int pos) {
+	B* a = Concesionaria[pos];
+	B* aux = NULL;
 	Concesionaria[pos] = NULL;
 	for (int i = pos; i < ocupado; i++)
 	{
@@ -75,14 +75,14 @@ inline V* Lista<V>::QuitarPos(int pos) {
 	ocupado--;
 	return NULL;
 }
-template<class V>
-inline void Lista<V>::operator+(V* objeto)
+template<class B>
+inline void Lista<B>::operator+(B* objeto)
 {
 	if (ocupado >= tamanio)
 		throw exception("No hay lugar");
 	Concesionaria[ocupado++] = objeto;
 };
-template<class V>
-inline void Lista<V>::operator<<(V* obj) { obj->To_String_e_Imprimir(); };
-template<class V>
-inline unsigned int Lista<V>::getocupado() const { return ocupado; }
+template<class B>
+inline void Lista<B>::operator<<(B* obj) { obj->To_String_e_Imprimir(); };
+template<class B>
+inline unsigned int Lista<B>::getocupado() const { return ocupado; }

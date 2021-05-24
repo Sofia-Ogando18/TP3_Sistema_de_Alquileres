@@ -6,7 +6,7 @@ class Lista_Alquileres:
 	public Lista
 {
 public:
-	Lista_Alquileres<V>(int tam = NMAX);
+	Lista_Alquileres<V>(int tam);
 	Alquiler* crear_alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion);
 	float Listar_por_Vehiculo_y_Dar_Precio();
 	~Lista_Alquileres();
@@ -14,7 +14,7 @@ public:
  
 template<class V>
 inline Lista_Alquileres<V>::Lista_Alquileres(int tam) {
-	this->tamanio = tam;
+	tamanio = tam;
 	this->ocupado = 0;
 	this->Concesionaria = new V * [tam];
 	for (int i = 0; i < tam; i++)
@@ -74,7 +74,7 @@ inline float Lista_Alquileres<V>::Listar_por_Vehiculo_y_Dar_Precio() {
 	return Ganancia;
 };
 template<class V>
-inline Lista_Alquileres<V>::~Lista_Alquileres() {
+inline Lista_Alquileres<V>:: ~Lista_Alquileres() {
 	if (this->Concesionaria != NULL) {
 		for (int i = 0; i < this->ocupado; i++)
 		{
@@ -83,5 +83,5 @@ inline Lista_Alquileres<V>::~Lista_Alquileres() {
 		}
 	}
 	delete[] this->Concesionaria;
-}
+};
 
