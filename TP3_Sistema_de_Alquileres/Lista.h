@@ -14,16 +14,30 @@ protected:
 	B** Concesionaria;
 	int tamanio, ocupado;
 public:
-	Lista<B>(int tam = NMAX);
+	Lista<B>();
+	Lista<B>(int tam);
 	~Lista();
 	void agregar(B* objeto);
-	B* operator[](unsigned int pos);
+	B* operator[](int pos);
 	B* QuitarPos(int pos);
 	void operator+(B* objeto);
 	void operator<<(B* obj);
 	unsigned int getocupado() const;
 };
 
+template<class B>
+inline Lista<B>::Lista()
+{
+	{
+		this->tamanio = 20;
+		ocupado = 0;
+		Concesionaria = new B * [20];
+		for (int i = 0; i < 20; i++)
+		{
+			Concesionaria[i] = NULL;
+		}
+	}
+}
 template<class B>
 inline Lista<B>::Lista(int tam)
 {
@@ -56,7 +70,7 @@ inline void Lista<B>::agregar(B* objeto)
 	Concesionaria[ocupado++] = objeto;
 }
 template<class B>
-inline B* Lista<B>::operator[](unsigned int pos) {
+inline B* Lista<B>::operator[](int pos) {
 	if (pos < ocupado)
 		return Concesionaria[pos];
 	return NULL;

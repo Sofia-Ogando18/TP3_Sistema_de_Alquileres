@@ -18,4 +18,8 @@ int Calcular_Dias(tm FInicio, tm FFinal) {
 	return diff_dia;
 };
 
-
+string Pasar_Fecha_to_String(tm Fecha) {
+	string Fechita;
+	Fechita = "\n" + to_string(Fecha.tm_mday) + "/" + to_string(Fecha.tm_mon) + "/" + to_string(Fecha.tm_year);
+	return Fechita;
+}

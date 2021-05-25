@@ -22,10 +22,8 @@ Alquiler::~Alquiler() {};
 string Alquiler::To_String_e_Imprimir() {
 	string Aux;
 	string User = Usuario->To_String_e_Imprimir();
-	char* Adq = asctime(&Fecha_Adquisicion);
-	char* Rtrn = asctime(&Fecha_Retorno);
 	Aux = "El cliente" + User + "\n Ha alquilado el vehículo" + Alquilado->To_String_e_Imprimir_Vehiculo() +
-		Extras.To_String_e_Imprimir() + "\n desde el " + Adq + " hasta el " + Rtrn + "\n Por un precio total de " +
-		to_string(Calcular_Tarifa_Total());
+		Extras.To_String_e_Imprimir() + "\n desde el " + Pasar_Fecha_to_String(Fecha_Adquisicion) + " hasta el "
+		+ Pasar_Fecha_to_String(Fecha_Retorno) + "\n Por un precio total de " + to_string(Calcular_Tarifa_Total());
 	return Aux;
 };
