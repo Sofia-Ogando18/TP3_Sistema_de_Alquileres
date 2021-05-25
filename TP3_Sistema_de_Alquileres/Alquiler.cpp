@@ -3,6 +3,7 @@ Alquiler::Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion){
 	time_t now = time(0);
 	tm* aux = localtime(&now);
 	Fecha_Adquisicion = *aux;
+	Fecha_Retorno = Calcular_Dias_Reverso(Fecha_Adquisicion, duracion);
 	this->Usuario = cliente;
 	this->Alquilado = vehiculo;
 };

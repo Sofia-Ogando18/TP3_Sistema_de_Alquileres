@@ -23,3 +23,9 @@ string Pasar_Fecha_to_String(tm Fecha) {
 	Fechita = "\n" + to_string(Fecha.tm_mday) + "/" + to_string(Fecha.tm_mon) + "/" + to_string(Fecha.tm_year);
 	return Fechita;
 }
+
+tm Calcular_Dias_Reverso(tm FInicio, int duracion) {
+	tm Aux = FInicio;
+	Aux.tm_mday = Aux.tm_mday + duracion;
+	return Aux;
+}
