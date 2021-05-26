@@ -7,6 +7,7 @@ Trafic::Trafic() {
 	this->Cant_Pasajeros_Max = 12;
 	this->Poliza = 6669743;
 	this->Tarifa_Base = 20000;
+	set_ultimo_mantenimiento();
 }
 Trafic::~Trafic() {};
 void Trafic::PasoMantenimiento() {
@@ -20,4 +21,4 @@ void Trafic::PasoMantenimiento() {
 	cout << aux;
 	set_ultimo_mantenimiento();
 };
-void Trafic::set_Tarifa_dia() { Precio_Por_Dia = 40000; };
+void Trafic::set_Tarifa_dia(int extras) { Precio_Por_Dia = 40000 + extras; };

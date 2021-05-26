@@ -14,7 +14,7 @@ int main()
 	Motocicleta* moto = new Motocicleta();
 	Automovil* Auto = new Automovil();
 	Camioneta* cam = new Camioneta();
-	//creamos un cliente que los alquile y una lista de alquileres
+	//creamos clientes que los alquilen y una lista de alquileres
 	Cliente* portenio = new Cliente();
 	Cliente* portenio1 = new Cliente("Marcelo Fuentes","calle falsa 123",443489);
 	Cliente* portenio2 = new Cliente("Martin Gomez", "la calle sin numero", 3467854);

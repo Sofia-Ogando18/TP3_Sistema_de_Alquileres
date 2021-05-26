@@ -7,9 +7,10 @@ Automovil::Automovil() {
 	this->Cant_Pasajeros_Max = 5;
 	this->Poliza = 6669743;
 	this->Tarifa_Base = 10000;
+	set_ultimo_mantenimiento();
 };
 Automovil::~Automovil() {};
-void Automovil::set_Tarifa_dia() { Precio_Por_Dia = 20000; };
+void Automovil::set_Tarifa_dia(int extras) { Precio_Por_Dia = 20000 + extras; };
 void Automovil::PasoMantenimiento() {
 	string aux = "\n Mantenimiento de una Camioneta:\n";
 	aux = aux + "Comprobar el nivel de aceite. ";

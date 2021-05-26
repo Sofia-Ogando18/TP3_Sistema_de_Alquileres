@@ -79,6 +79,7 @@ inline float Lista_Alquileres::Listar_por_Vehiculo_y_Dar_Precio() {
 
 inline void Lista_Alquileres::Set_Extras(int pos, Adicional ad1, int can1, Adicional ad2, int can2) {
 this->Concesionaria[pos]->Set_Extras(ad1, can1, ad2, can2);
+this->Concesionaria[pos]->Calcular_Tarifa_Dia(ad1, can1, ad2, can2);
 };
 
 inline Lista_Alquileres:: ~Lista_Alquileres() {

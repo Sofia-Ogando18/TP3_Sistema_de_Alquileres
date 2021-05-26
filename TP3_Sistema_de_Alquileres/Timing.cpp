@@ -19,6 +19,14 @@ string Pasar_Fecha_to_String(tm Fecha) {
 
 tm Calcular_Dias_Reverso(tm FInicio, int duracion) {
 	tm Aux = FInicio;
-	Aux.tm_mday = Aux.tm_mday + duracion;
+	if (FInicio.tm_mday + duracion < 30) { FInicio.tm_mday = FInicio.tm_mday + duracion; }
+	if(FInicio.tm_mday + duracion>30){
+		FInicio.tm_mday = FInicio.tm_mday + duracion - 30;
+		if (FInicio.tm_mon + 1 < 12) { FInicio.tm_mon = FInicio.tm_mon + 1; }
+		if (FInicio.tm_mon + 1 > 12) {
+			FInicio.tm_mon = 1;
+			FInicio.tm_year = FInicio.tm_year + 1;
+		}
+	}
 	return Aux;
 }

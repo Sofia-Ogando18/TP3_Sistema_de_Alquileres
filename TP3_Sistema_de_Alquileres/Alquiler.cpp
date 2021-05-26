@@ -8,19 +8,21 @@ Alquiler::Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion){
 	tm* aux = localtime(&now);
 	Fecha_Adquisicion = *aux;
 	Fecha_Retorno = Calcular_Dias_Reverso(Fecha_Adquisicion, duracion);
+	this->Duracion = duracion;
 	this->Usuario = cliente;
 	this->Alquilado = vehiculo;
 };
 float Alquiler::Calcular_Tarifa_Dia(Adicional ad1, int can1, Adicional ad2, int can2) {
 	Tarifa_por_Dia = Extras.Calcular_Precio_Dia(Alquilado, ad1, can1, ad2, can2);
+	Alquilado->set_Tarifa_dia(Tarifa_por_Dia);
 	return Tarifa_por_Dia;
 };
 float Alquiler::Calcular_Tarifa_Total() {
-	int Duracion = Calcular_Dias(Fecha_Adquisicion, Fecha_Retorno);
-	return Alquilado->Tarifa_Base + (Duracion * Tarifa_por_Dia);
+	return Alquilado->Tarifa_Base + (this->Duracion * Tarifa_por_Dia);
 };
 void Alquiler::Set_Extras(Adicional ad1, int can1, Adicional ad2, int can2) {
 	Extras.Set_Todo(ad1, can1, ad2, can2);
+	Calcular_Tarifa_Total();
 };
 Vehiculo* Alquiler::Get_Vehiculo() { return Alquilado; };
 Alquiler::~Alquiler() {};

@@ -6,9 +6,10 @@ Motocicleta::Motocicleta() {
 	this->Cant_Pasajeros_Max = 2;
 	this->Poliza = 6669743;
 	this->Tarifa_Base = 5000;
+	set_ultimo_mantenimiento();
 
 };
-void Motocicleta::set_Tarifa_dia() { Precio_Por_Dia = 10000; };
+void Motocicleta::set_Tarifa_dia(int extras) { Precio_Por_Dia = 10000 + extras; };
 Motocicleta::~Motocicleta() {};
 void Motocicleta::PasoMantenimiento() {
 	string aux = "\n Mantenimiento de una Motocicleta:\n";

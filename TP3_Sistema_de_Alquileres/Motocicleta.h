@@ -7,7 +7,7 @@ class Motocicleta :
 	friend class Adicionales;
 public:
 	Motocicleta();
-	void set_Tarifa_dia();
+	void set_Tarifa_dia(int extras);
 	void PasoMantenimiento();
 	~Motocicleta();
 

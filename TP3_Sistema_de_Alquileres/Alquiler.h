@@ -26,6 +26,7 @@ class Alquiler
 	tm Fecha_Retorno;
 	float Tarifa_por_Dia;
 	float Tarifa_Total;
+	int Duracion;
 public:
 	Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion);
 	//Alquiler();

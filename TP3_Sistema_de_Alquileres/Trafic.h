@@ -7,7 +7,7 @@ class Trafic :
 	friend class  Adicionales;
 public:
 	Trafic();
-	void set_Tarifa_dia();
+	void set_Tarifa_dia(int extras);
 	void PasoMantenimiento();
 	~Trafic();
 

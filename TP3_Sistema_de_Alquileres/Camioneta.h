@@ -7,7 +7,7 @@ class Camioneta :
 	friend class Adicionales;
 public:
 	Camioneta();
-	void set_Tarifa_dia();
+	void set_Tarifa_dia(int extras);
 	void PasoMantenimiento();
 	~Camioneta();
 
