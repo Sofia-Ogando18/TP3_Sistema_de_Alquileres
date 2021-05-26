@@ -159,6 +159,7 @@
     <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="Motocicleta.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Timing.cpp" />
     <ClCompile Include="Trafic.cpp" />
     <ClCompile Include="Vehiculo.cpp" />
   </ItemGroup>

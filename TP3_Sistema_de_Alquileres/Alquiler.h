@@ -6,13 +6,13 @@
 #include <sstream>
 #include <iostream>
 #include <time.h>
-#include "Motocicleta.h";
-#include "Vehiculo.h";
-#include "Lista.h";
-#include "Camioneta.h";
-#include "Automovil.h";
-#include "Trafic.h";
-#include "Cliente.h";
+#include "Motocicleta.h"
+#include "Vehiculo.h"
+#include "Lista.h"
+#include "Camioneta.h"
+#include "Automovil.h"
+#include "Trafic.h"
+#include "Cliente.h"
 #include "Adicionales.h"
 #include "Timing.h"
 using namespace std;
