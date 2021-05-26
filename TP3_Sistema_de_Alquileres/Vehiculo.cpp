@@ -8,11 +8,11 @@ void Vehiculo::set_ultimo_mantenimiento() {
 
 };
 string Vehiculo::To_String_e_Imprimir_Vehiculo() {
-	char* dt = asctime(&Fecha_Ult_Mantenimiento);
+	//char* dt = asctime(&Fecha_Ult_Mantenimiento);
 	string aux = "\n Vehiculo de patente" + to_string(Patente) + "\n Numero de chasis" + to_string(Chasis) +
 		"\n Numero de poliza" + to_string(Poliza) + "\n de color" + Color + "\n Tarifa : " + to_string(Tarifa_Base) +
 		"+" + to_string(Precio_Por_Dia) + "\n Pasajeros max." + to_string(Cant_Pasajeros_Max) +
-		"\n Fecha del ultimo mantenimiento" + dt;
+		"\n Fecha del ultimo mantenimiento"; //+ dt 
 	cout << aux;
 	return aux;
 };

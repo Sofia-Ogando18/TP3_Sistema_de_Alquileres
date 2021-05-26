@@ -28,6 +28,7 @@ class Alquiler
 	float Tarifa_Total;
 public:
 	Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion);
+	//Alquiler();
 	~Alquiler();
 	void Set_Extras(Adicional ad1, int can1, Adicional ad2, int can2);
 	Vehiculo* Get_Vehiculo();

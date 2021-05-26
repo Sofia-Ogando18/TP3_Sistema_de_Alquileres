@@ -1,5 +1,11 @@
 #include "Alquiler.h"
+/*Alquiler::Alquiler() {
+	this->Tarifa_Total = 5000, 5;
+	this->Tarifa_por_Dia = 1000;
+};*/
 Alquiler::Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion){
+	/*this->Tarifa_Total = 5000, 5;
+	this->Tarifa_por_Dia = 1000; */
 	time_t now = time(0);
 	tm* aux = localtime(&now);
 	Fecha_Adquisicion = *aux;
