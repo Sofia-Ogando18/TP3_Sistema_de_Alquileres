@@ -4,8 +4,6 @@
 	this->Tarifa_por_Dia = 1000;
 };*/
 Alquiler::Alquiler(Vehiculo* vehiculo, Cliente* cliente, int duracion){
-	/*this->Tarifa_Total = 5000, 5;
-	this->Tarifa_por_Dia = 1000; */
 	time_t now = time(0);
 	tm* aux = localtime(&now);
 	Fecha_Adquisicion = *aux;
@@ -29,7 +27,7 @@ Alquiler::~Alquiler() {};
 string Alquiler::To_String_e_Imprimir() {
 	string Aux;
 	string User = Usuario->To_String_e_Imprimir();
-	Aux = "El cliente" + User + "\n Ha alquilado el vehículo" + Alquilado->To_String_e_Imprimir_Vehiculo() +
+	Aux = "El cliente: " + User + "\n Ha alquilado el vehículo: " + Alquilado->To_String_e_Imprimir_Vehiculo() +
 		Extras.To_String_e_Imprimir() + "\n desde el " + Pasar_Fecha_to_String(Fecha_Adquisicion) + " hasta el "
 		+ Pasar_Fecha_to_String(Fecha_Retorno) + "\n Por un precio total de " + to_string(Calcular_Tarifa_Total());
 	return Aux;

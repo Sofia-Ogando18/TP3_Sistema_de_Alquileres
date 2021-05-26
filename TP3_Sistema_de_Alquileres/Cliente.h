@@ -14,6 +14,7 @@ class Cliente
 	string Direccion;
 public:
 	Cliente();
+	Cliente(string NA, string dire, int dni);
 	string To_String_e_Imprimir();
 	~Cliente();
 

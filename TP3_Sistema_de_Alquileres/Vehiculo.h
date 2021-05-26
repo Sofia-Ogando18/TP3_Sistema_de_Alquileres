@@ -6,19 +6,20 @@
 #include <sstream>
 #include <iostream>
 #include <time.h>
+#include "Timing.h"
 using namespace std;
 class Vehiculo
 {
 	friend class Adicionales;
 	friend class Alquiler;
 protected:
-	int Patente;
-	int Chasis;
+	unsigned int Patente;
+	unsigned int Chasis;
 	string Color;
-	int Poliza;
+	unsigned int Poliza;
 	float Precio_Por_Dia;
 	tm Fecha_Ult_Mantenimiento;
-	int Cant_Pasajeros_Max;
+	unsigned int Cant_Pasajeros_Max;
 	float Tarifa_Base;
 
 public:

@@ -16,10 +16,12 @@ int main()
 	Camioneta* cam = new Camioneta();
 	//creamos un cliente que los alquile y una lista de alquileres
 	Cliente* portenio = new Cliente();
+	Cliente* portenio1 = new Cliente("Marcelo Fuentes","calle falsa 123",443489);
+	Cliente* portenio2 = new Cliente("Martin Gomez", "la calle sin numero", 3467854);
 	Lista_Alquileres* alquileres_total = new Lista_Alquileres(4);
 	alquileres_total->crear_alquiler(combi, portenio, 10);
-	alquileres_total->crear_alquiler(moto, portenio, 15);
-	alquileres_total->crear_alquiler(Auto, portenio, 8);
+	alquileres_total->crear_alquiler(moto, portenio1, 15);
+	alquileres_total->crear_alquiler(Auto, portenio2, 8);
 	alquileres_total->crear_alquiler(cam, portenio, 12);
 	//Le ponemos extras
 	alquileres_total->Set_Extras(0, Silla_Ninios, 5, Asiento_Rebatible, 10);

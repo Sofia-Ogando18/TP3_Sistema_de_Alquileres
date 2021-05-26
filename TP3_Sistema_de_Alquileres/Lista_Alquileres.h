@@ -37,6 +37,7 @@ inline float Lista_Alquileres::Listar_por_Vehiculo_y_Dar_Precio() {
 	Vehiculo* Aux2;
 	//Listamos en orden Moto-Auto-Camioneta-Trafic
 	for (int i = 0; i < this->ocupado; i++) {
+
 		Aux2 = this->Concesionaria[i]->Get_Vehiculo();
 		Aux1 = dynamic_cast<Motocicleta*> (Aux2);
 		if (Aux1 != NULL) {

@@ -5,6 +5,11 @@ Cliente::Cliente() {
 	this->Nombre_Apellido = "Juan Topo";
 
 };
+Cliente::Cliente(string NA,string dire,int dni) :Cliente(){
+	this->DNI = dni;
+	this->Nombre_Apellido = NA;
+	this->Direccion = dire;
+};
 string Cliente::To_String_e_Imprimir() {
 	string Aux;
 	Aux = "\n" + Nombre_Apellido + "\n de direccion:" + Direccion + "\n y DNI" + to_string(DNI);
